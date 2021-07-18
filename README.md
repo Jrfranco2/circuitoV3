@@ -24,6 +24,13 @@ git clone https://github.com/Jrfranco2/circuitoV3.git
 
 # Puesta en marcha
 Para utilizar el aplicativo es necesario:
-1. abrir la carpeta circuitoV3->test.circuitov3->Sistema
-2. en el archivo Sistema dar click derecho New Representation->new sistema
+1. Abrir la carpeta circuitoV3->test.circuitov3->Sistema
+   en el archivo Sistema dar click derecho New Representation->new sistema
 ![image](https://user-images.githubusercontent.com/23088391/126080565-14c0b2a9-ea8a-4ed7-bf74-0605b69b659f.png)
+
+# Exportar codigo
+1. Guardar el archivo new Sistema
+2. Abrir la carpeta circuitoV3Acceleo->src->circuitoV3Acceleo.main
+3. Dar click derecho en el archivo 'generate.mtl'->Run As-> Lunch Acceleo Application
+![image](https://user-images.githubusercontent.com/23088391/126080850-ffdfc427-ed1c-4e10-8f2b-649d379e2aa9.png)
+
