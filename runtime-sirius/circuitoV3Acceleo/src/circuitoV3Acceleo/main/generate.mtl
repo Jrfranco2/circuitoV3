@@ -1,0 +1,73 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.example.org/circuitoV3')]
+[template public generateElement(aSistema : Sistema)]
+[comment @main/]
+[file ('aSistema.ino', false, 'UTF-8')]
+void setup(){	
+//pulsador
+[for (pulsador : Pulsador | aSistema.elementos)]
+		pinMode([pulsador.numero_pin/],INPUT);
+[/for]
+//led
+[for (led : Led | aSistema.elementos)]
+		pinMode([led.numero_pin/],OUTPUT);
+[/for]
+}
+void loop(){
+//Estado Pulsador
+[for (pulsador : Pulsador | aSistema.elementos)]
+		boolean [pulsador.nombreElemento/]=digitalRead([pulsador.numero_pin/]);
+[/for]
+
+//Estado Compuerta
+[for (compuerta : Compuerta | aSistema.elementos)]
+		boolean [compuerta.nombreElemento/]= false;
+[/for]
+[for (flowele : FlowElement | aSistema.elementos)]
+	[if (flowele.oclAsType(And).entrante_cambio.source<>'invalid')]
+//AND [flowele.oclAsType(And).nombreElemento/]
+		if([for(flow:DataFlow|flowele.oclAsType(And).entrante_cambio.source.eContents())][if(self.source.oclIsTypeOf(Pulsador) and self.target.oclIsTypeOf(And))][self.source.oclAsType(Pulsador).nombreElemento.toString().concat('==true')/][if(self.source<>flowele.oclAsType(And).entrante_cambio.source->last())] && [/if][elseif (self.source.oclIsKindOf(Compuerta) and self.target.oclIsTypeOf(And))][self.source.oclAsType(Compuerta).nombreElemento.toString().concat('==true')/][if(self.source<>flowele.oclAsType(And).entrante_cambio.source->last())] && [/if][/if][/for])
+		{
+			[flowele.oclAsType(And).nombreElemento/] = true;	
+		}
+		else{
+			[flowele.oclAsType(And).nombreElemento/] = false;
+		}
+	[/if]
+	[if (flowele.oclAsType(Or).entrante_cambio.source<>'invalid')]
+//Or [flowele.oclAsType(Or).nombreElemento/]
+		if([for(flow:DataFlow|flowele.oclAsType(Or).entrante_cambio.source.eContents())][if(self.source.oclIsTypeOf(Pulsador) and self.target.oclIsTypeOf(Or))][self.source.oclAsType(Pulsador).nombreElemento.toString().concat('==false')/][if(self.source<>flowele.oclAsType(Or).entrante_cambio.source->last())] && [/if][elseif ((self.source.oclIsTypeOf(Or) or self.source.oclIsTypeOf(And) or self.source.oclIsTypeOf(Not))and self.target.oclIsTypeOf(Or))][self.source.oclAsType(Compuerta).nombreElemento.toString().concat('==false && ')/][/if][/for])
+		{
+			[flowele.oclAsType(Or).nombreElemento/] = false;	
+		}
+		else{
+			[flowele.oclAsType(Or).nombreElemento/] = true;
+		}
+	[/if]
+[if (flowele.oclAsType(Not).entrante_cambio.source<>'invalid')]
+//Not [flowele.oclAsType(Not).nombreElemento/]
+if([for(flow:DataFlow|flowele.oclAsType(Not).entrante_cambio.source.eContents())][if(self.source.oclIsTypeOf(Pulsador) and self.target.oclIsTypeOf(Not))][self.source.oclAsType(Pulsador).nombreElemento.toString().concat('==true ')/][elseif ((self.source.oclIsTypeOf(Or) or self.source.oclIsTypeOf(And) or self.source.oclIsTypeOf(Not))and self.target.oclIsTypeOf(Not))][self.source.oclAsType(Compuerta).nombreElemento.toString().concat('==true ')/][/if][/for])
+		{
+			[flowele.oclAsType(Not).nombreElemento/] = false;	
+		}
+		else{
+			[flowele.oclAsType(Not).nombreElemento/] = true;
+		}
+	[/if]
+[/for]
+[for (flowele : FlowElement | aSistema.elementos)]
+[if (flowele.oclAsType(Led).entrante_cambio.source<>'invalid')]
+//LED  [flowele.oclAsType(Led).nombreElemento/]
+		if([for(flow:DataFlow|flowele.oclAsType(Led).entrante_cambio.source.eContents())][if(self.source.oclIsTypeOf(Pulsador) and self.target.oclIsTypeOf(Led))][self.source.oclAsType(Pulsador).nombreElemento.toString().concat('==true ')/][elseif ((self.source.oclIsTypeOf(Or) or self.source.oclIsTypeOf(And) or self.source.oclIsTypeOf(Not))and self.target.oclIsTypeOf(Led))][self.source.oclAsType(Compuerta).nombreElemento.toString().concat('==true ')/][/if][/for])
+		{
+			digitalWrite([flowele.oclAsType(Led).numero_pin/], HIGH);	
+		}
+		else{
+			digitalWrite([flowele.oclAsType(Led).numero_pin/], LOW);
+		}
+[/if]
+[/for]
+}
+[/file]
+[/template]
+
