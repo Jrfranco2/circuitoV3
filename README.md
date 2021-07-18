@@ -6,7 +6,7 @@ git clone https://github.com/Jrfranco2/circuitoV3.git
 ```
 3. Descargar e instalar Eclipse Modelling Tools-2021-12 
 4. Abrir Eclipse Modelling Tools
-5. Importar los siguientes proyectos al area de trabajo (File->Open Projects from File System->Directory), seleccionar la carpeta circuitoV3:
+5. Importar los siguientes proyectos al area de trabajo (File->Open Projects from File System->Directory), abrir la carpeta circuitoV3 y seleccionar:
 #### Circuito V3
 #### Circuito V3 Edit
 #### Circuito Editor
