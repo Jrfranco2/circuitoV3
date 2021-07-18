@@ -11,7 +11,7 @@ git clone https://github.com/Jrfranco2/circuitoV3.git
 #### Circuito Editor
 #### Circuito Events
 4. Crear una nueva instancia de Eclipse
-5. Importar los siguientes proyectos en esa instancia:
+5. Importar los siguientes proyectos de la carpeta 'runtime-sirius' en la nueva instancia:
 #### Circuito V3
 #### Circuito Design
 #### Circuito Acceleo
