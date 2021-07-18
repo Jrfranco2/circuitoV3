@@ -22,3 +22,8 @@ git clone https://github.com/Jrfranco2/circuitoV3.git
 #### Circuito Acceleo
 ![image](https://user-images.githubusercontent.com/23088391/126080519-be203925-d0b0-45a0-ad9e-4290d7814b1c.png)
 
+# Puesta en marcha
+Para utilizar el aplicativo es necesario:
+1. abrir la carpeta circuitoV3->test.circuitov3->Sistema
+2. en el archivo Sistema dar click derecho New Representation->new sistema
+![image](https://user-images.githubusercontent.com/23088391/126080565-14c0b2a9-ea8a-4ed7-bf74-0605b69b659f.png)
