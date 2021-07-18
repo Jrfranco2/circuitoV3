@@ -32,5 +32,6 @@ Para utilizar el aplicativo es necesario:
 1. Guardar el archivo new Sistema
 2. Abrir la carpeta circuitoV3Acceleo->src->circuitoV3Acceleo.main
 3. Dar click derecho en el archivo 'generate.mtl'->Run As-> Lunch Acceleo Application
-![image](https://user-images.githubusercontent.com/23088391/126080850-ffdfc427-ed1c-4e10-8f2b-649d379e2aa9.png)
+![image](https://user-images.githubusercontent.com/23088391/126080940-71eda82c-9417-45c7-8b92-23485f9f9098.png)
+4. Buscar en la carpeta circuitoV3Acceleo el archivo aSistema.ino y abrir
 
