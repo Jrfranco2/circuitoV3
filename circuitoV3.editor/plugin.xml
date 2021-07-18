@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated circuitoV3 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="circuitoV3.presentation.CircuitoV3ModelWizardID"
+            name="%_UI_CircuitoV3ModelWizard_label"
+            class="circuitoV3.presentation.CircuitoV3ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CircuitoV3ModelFile.gif">
+         <description>%_UI_CircuitoV3ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated circuitoV3 -->
+      <editor
+            id="circuitoV3.presentation.CircuitoV3EditorID"
+            name="%_UI_CircuitoV3Editor_label"
+            icon="icons/full/obj16/CircuitoV3ModelFile.gif"
+            extensions="circuitov3"
+            class="circuitoV3.presentation.CircuitoV3Editor"
+            contributorClass="circuitoV3.presentation.CircuitoV3ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

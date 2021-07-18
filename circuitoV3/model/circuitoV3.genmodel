@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/circuitoV3/src-gen" creationIcons="false" editDirectory="/circuitoV3.edit/src-gen"
+    editorDirectory="/circuitoV3.editor/src-gen" modelPluginID="circuitoV3" modelName="CircuitoV3"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>circuitoV3.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="CircuitoV3" resource="XMI" disposableProviderFactory="true"
+      ecorePackage="circuitoV3.ecore#/">
+    <genClasses ecoreClass="circuitoV3.ecore#//Sistema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference circuitoV3.ecore#//Sistema/elementos"/>
+    </genClasses>
+    <genClasses ecoreClass="circuitoV3.ecore#//Pulsador">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute circuitoV3.ecore#//Pulsador/numero_pin"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="circuitoV3.ecore#//FlowElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute circuitoV3.ecore#//FlowElement/nombreElemento"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute circuitoV3.ecore#//FlowElement/estado"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="circuitoV3.ecore#//FlowSource">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference circuitoV3.ecore#//FlowSource/saliente_cambio"/>
+    </genClasses>
+    <genClasses ecoreClass="circuitoV3.ecore#//FlowTarget">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference circuitoV3.ecore#//FlowTarget/entrante_cambio"/>
+    </genClasses>
+    <genClasses ecoreClass="circuitoV3.ecore#//DataFlow">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference circuitoV3.ecore#//DataFlow/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference circuitoV3.ecore#//DataFlow/source"/>
+    </genClasses>
+    <genClasses ecoreClass="circuitoV3.ecore#//Compuerta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute circuitoV3.ecore#//Compuerta/pin_total"/>
+    </genClasses>
+    <genClasses ecoreClass="circuitoV3.ecore#//And"/>
+    <genClasses ecoreClass="circuitoV3.ecore#//Or"/>
+    <genClasses ecoreClass="circuitoV3.ecore#//Not"/>
+    <genClasses ecoreClass="circuitoV3.ecore#//Led">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute circuitoV3.ecore#//Led/numero_pin"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

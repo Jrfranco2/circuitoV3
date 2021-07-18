@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<circuitoV3:Sistema
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:circuitoV3="http://www.example.org/circuitoV3"
+    xsi:schemaLocation="http://www.example.org/circuitoV3 circuitoV3.ecore">
+  <elementos
+      xsi:type="circuitoV3:Pulsador"
+      nombreElemento="ss"
+      numero_pin="4"/>
+  <elementos
+      xsi:type="circuitoV3:Pulsador"
+      nombreElemento="a"
+      numero_pin="4"/>
+</circuitoV3:Sistema>
