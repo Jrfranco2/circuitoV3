@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="circuitoV3.edit/src-gen"/>
+	<classpathentry kind="src" path="circuitoV3.editor/src-gen"/>
+	<classpathentry kind="src" path="circuitoV3/src"/>
+	<classpathentry kind="src" path="circuitoV3/src-gen"/>
+	<classpathentry kind="src" path="circuitV3Events/src"/>
+	<classpathentry kind="src" path="runtime-sirius/circuitoV3.design/src"/>
+	<classpathentry kind="src" path="runtime-sirius/circuitoV3Acceleo/src"/>
+	<classpathentry kind="output" path="circuitV3Events/bin"/>
+</classpath>

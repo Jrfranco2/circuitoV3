@@ -1,21 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<circuitoV3:Sistema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:circuitoV3="http://www.example.org/circuitoV3">
-  <elementos xsi:type="circuitoV3:Pulsador" nombreElemento="Pulsador_1" estado="true" numero_pin="4">
-    <saliente_cambio estado="true" target="//@elementos.4"/>
-  </elementos>
-  <elementos xsi:type="circuitoV3:Led" nombreElemento="Led_1" estado="true" entrante_cambio="//@elementos.4/@saliente_cambio.0" numero_pin="5"/>
-  <elementos xsi:type="circuitoV3:Pulsador" nombreElemento="Pulsador_2" numero_pin="3">
-    <saliente_cambio target="//@elementos.3"/>
-    <saliente_cambio target="//@elementos.5"/>
-  </elementos>
-  <elementos xsi:type="circuitoV3:And" nombreElemento="Compuerta_And_1" entrante_cambio="//@elementos.2/@saliente_cambio.0" pin_total="1">
-    <saliente_cambio target="//@elementos.6"/>
-  </elementos>
-  <elementos xsi:type="circuitoV3:Or" nombreElemento="Compuerta_OR_1" estado="true" entrante_cambio="//@elementos.0/@saliente_cambio.0 //@elementos.5/@saliente_cambio.0" pin_total="2">
-    <saliente_cambio estado="true" target="//@elementos.1"/>
-  </elementos>
-  <elementos xsi:type="circuitoV3:Or" nombreElemento="Compuerta_OR_2" entrante_cambio="//@elementos.2/@saliente_cambio.1" pin_total="1">
-    <saliente_cambio target="//@elementos.4"/>
-  </elementos>
-  <elementos xsi:type="circuitoV3:Led" nombreElemento="Led_2" entrante_cambio="//@elementos.3/@saliente_cambio.0"/>
-</circuitoV3:Sistema>
+<circuitoV3:Sistema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:circuitoV3="http://www.example.org/circuitoV3"/>

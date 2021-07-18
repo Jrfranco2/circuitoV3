@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="circuitoV3Acceleo">
-    <property name="ECLIPSE_HOME" value="C:/Users/jonas/eclipse/modeling-2020-12/eclipse"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../../eclipse/modeling-2020-12/eclipse"/>
     <property name="ECLIPSE_WORKSPACE" value="../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
